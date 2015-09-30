@@ -13,7 +13,6 @@
     white-space: nowrap;
 
     li {
-      //transform: skewX(-10deg);
       &:hover,
       &.active {
         background-color: #000f41;
@@ -42,7 +41,6 @@
         color: white;
       }
       span {
-        //transform: skewX(10deg);
         display: inline-block;
       }
 
@@ -50,10 +48,16 @@
   }
   @media screen and (min-width: $screen-sm-min) {
     li {
+      -webkit-transform: skewX(-10deg);
+      -moz-transform: skewX(-10deg);
+      -o-transform: skewX(-10deg);
       transform: skewX(-10deg);
     }
     a {
       span {
+        -webkit-transform: skewX(10deg);
+        -moz-transform: skewX(10deg);
+        -o-transform: skewX(10deg);
         transform: skewX(10deg);
       }
     }
@@ -68,6 +72,7 @@
 }
 
 .header {
+  font-family: 'Fira Sans', sans-serif;
   margin-top: $navbar-height;
   background: url("../img/header-bg-hires.jpg") no-repeat center;
   background-size: initial;
@@ -76,4 +81,12 @@
     background-size: cover;
   }
   min-height: 50em;
+  h1 {
+    font-size: 3.6em;
+  }
+  .characters {
+    color: white;
+    direction: rtl;
+    padding-right: 15px;
+  }
 }
