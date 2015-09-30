@@ -1,0 +1,54 @@
+//@import "animate.min.css";
+//font-family: 'Fira Sans', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&subset=cyrillic,latin);
+
+@font-face {
+  font-family: 'MerriweatherItalic';
+  src: url('../fonts/MerriweatherItalic.eot');
+  src: url('../fonts/MerriweatherItalic.eot') format('embedded-opentype'),
+  url('../fonts/MerriweatherItalic.woff2') format('woff2'),
+  url('../fonts/MerriweatherItalic.woff') format('woff'),
+  url('../fonts/MerriweatherItalic.ttf') format('truetype'),
+  url('../fonts/MerriweatherItalic.svg#MerriweatherItalic') format('svg');
+}
+
+html, body {
+  height: 100%;
+  position: relative;
+}
+
+body {
+
+}
+
+body {
+  @media screen and (max-width: $screen-sm-min) {
+    font-size: 10px;
+  }
+}
+
+h1, h2, h3, h4, h5, .nav {
+  font-family: 'Fira Sans', sans-serif;
+  color: black;
+}
+
+*:hover {
+  //transition: background-color 0.5s ease, color 0.5s ease,  color 0.2s ease, color 0.2s ease;
+  //transition: color 0.5s ease, color 0.5s ease;
+}
+
+.relative {
+  position: relative;
+}
+
+.white-color {
+  color: white;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 700;
+}
