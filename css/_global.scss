@@ -98,6 +98,12 @@ input, a, button, textarea, .btn {
 .section-header {
   text-align: center;
   font-weight: 500;
+  h2 {
+    font-size: 3em;
+  }
+  @media screen and (max-width: $screen-sm-min) {
+    font-size: 7px;
+  }
 }
 
 .parallax-block {

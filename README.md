@@ -4,4 +4,3 @@ Based: HTML Boilerplate, Bootstrap v3.3.5-sass port  - modify the source and com
 addons:
 flipclock.js,
 moment.js,
-scrollr.js

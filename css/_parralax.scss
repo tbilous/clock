@@ -1,7 +1,8 @@
 #parallax-1 {
   background: url("../img/parallax-on-bg-hires.jpg") 50% 0 no-repeat fixed;
-  height: 50em;
+  min-height: 28.6em;
   margin: 0 auto;
   width: 100%;
   position: relative;
+  padding-top: 3.5em;
 }
