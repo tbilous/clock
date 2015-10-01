@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, .nav {
   color: black;
 }
 
-input, a, button, textarea {
+input, a, button, textarea, .btn {
   &:focus,
   &:active {
     outline: none;
@@ -84,8 +84,22 @@ input, a, button, textarea {
   margin: 0 auto;
 }
 
+.no-before {
+  &::before {
+    display: none;
+  }
+}
 .btn-lg {
   line-height: 3.571em;
   padding: 0;
   font-size: $font-size-base;
+}
+
+.section-header {
+  text-align: center;
+  font-weight: 500;
+}
+
+.parallax-block {
+  background-color: transparent;
 }
