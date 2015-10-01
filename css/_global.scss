@@ -45,6 +45,14 @@ h1, h2, h3, h4, h5, .nav {
   color: white;
 }
 
+.black-color {
+  color: black;
+}
+
+.white-bg {
+  background-color: white;
+}
+
 .brand-color {
   color: $brand-primary;
 }
@@ -55,4 +63,16 @@ h1, h2, h3, h4, h5, .nav {
 
 .bold {
   font-weight: 700;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.block-centered {
+  margin: 0 auto;
 }
