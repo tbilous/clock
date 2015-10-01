@@ -1,6 +1,43 @@
 .aswork-section {
+  padding-top: 2.8em;
+  padding-bottom: 5em;
+  .section-header {
+    margin-bottom: 5em;
+  }
   .subheader {
     font-size: 1.2em;
   }
   background: url("../img/as-bg.jpg");
+  .step-header {
+    text-transform: uppercase;
+  }
+  .step-manifest {
+    font-family: 'Fira Sans', sans-serif;
+  }
+  .step-icon {
+    width: 12.5em;
+    height: 12.5em;
+    margin: 0 auto;
+  }
+  .step1 {
+    .step-icon {
+      background: url("../img/check-order.png") center no-repeat;
+      background-size: 100%;
+    }
+  }
+  .step2 {
+    .step-icon {
+      background: url("../img/edit-order.png") center no-repeat;
+      background-size: 100%;
+    }
+  }
+  .step3 {
+    .step-icon {
+      background: url("../img/close-order.png") center no-repeat;
+      background-size: 100%;
+    }
+  }
+  .step1, .step2, .step3 {
+    margin-bottom: 2em;
+  }
 }

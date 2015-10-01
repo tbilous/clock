@@ -59,16 +59,20 @@
         display: inline-block;
         position: absolute;
         top: 50%;
-        left: -3px;
+        left: -4px;
         -webkit-transform: $skew-positive;
         -moz-transform: $skew-positive;
         -o-transform: $skew-positive;
         transform: $skew-positive;
+        &:hover {
+          display: none;
+        }
       }
       &:nth-last-child(1)::after, &:nth-child(1)::after {
         display: none;
       }
     }
+    li:hover::after,
     a {
       span {
         -webkit-transform: $skew-positive;
