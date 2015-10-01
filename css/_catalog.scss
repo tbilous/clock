@@ -2,6 +2,8 @@
 .catalog-section {
   font-family: 'Fira Sans', sans-serif;
   background-color: #f5f5f5;
+  padding-top: 3.1em;
+  padding-bottom: 2.2em;
   .catalog-item {
     background-color: white;
     position: relative;
@@ -9,6 +11,7 @@
     height: 37em;
     padding-top: 3em;
     text-align: center;
+    margin-bottom: 4.5em;
   }
   .ribbon {
     width: 9.500em;
@@ -24,7 +27,7 @@
     height: 17.5em;
     margin: 0 auto 1.5em;
   }
-  .top_two {
+  .top2 {
     .item-photo {
       background: url("../img/goods/item11-hires.jpg") center no-repeat;
       background-size: 100%;
@@ -34,6 +37,25 @@
       }
     }
   }
+  .bottom1 {
+    .item-photo {
+      background: url("../img/goods/item20.jpg") center no-repeat;
+      background-size: contain;
+    }
+  }
+  .bottom2 {
+    .item-photo {
+      background: url("../img/goods/item21.jpg") center no-repeat;
+      background-size: contain;
+    }
+  }
+  .bottom4 {
+    .item-photo {
+      background: url("../img/goods/item23.jpg") center no-repeat;
+      background-size: contain;
+    }
+  }
+
   .item-name {
     text-align: center;
     font-size: 1.4em;
@@ -52,6 +74,7 @@
   .buy-btn {
     width: 80%;
     display: block;
-    margin: 0 auto;
+    border-radius: 3px;
+    margin: .5em auto .9em;
   }
 }
