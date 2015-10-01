@@ -10,6 +10,11 @@
   background: url("../img/as-bg.jpg");
   .step-header {
     text-transform: uppercase;
+    h3 {
+      @media screen and (max-width: $screen-sm-max) {
+        font-size: 12px;
+      }
+    }
   }
   .step-manifest {
     font-family: 'Fira Sans', sans-serif;

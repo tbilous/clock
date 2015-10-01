@@ -56,11 +56,12 @@ $(document).ready(function () {
     // Кешируем объект окна
     $window = $(window);
 
+
+    //PARALLAX
+
     $('div[data-type="background"]').each(function () {
-        var $bgobj = $(this); // Назначаем объект
-
+        var $bgobj = $(this); // Назначаем объек
         $(window).scroll(function () {
-
             // Прокручиваем фон со скоростью var.
             // Значение yPos отрицательное, так как прокручивание осуществляется вверх!
             var yPos = -($window.scrollTop() / $bgobj.data('speed'));
@@ -70,10 +71,26 @@ $(document).ready(function () {
 
             // Смещаем фон
             $bgobj.css({backgroundPosition: coords});
-
         });
 
     });
+    /*
+     $('#parallax-2[data-type="background"]').each(function () {
+     var $bgobj = $(this); // Назначаем объект
+     $(window).scroll(function () {
+     // Прокручиваем фон со скоростью var.
+     // Значение yPos отрицательное, так как прокручивание осуществляется вверх!
+     var yPos = -($window.scrollTop() / $bgobj.data('speed'))+900;
+     // Размещаем все вместе в конечной точке
+     var coords = '50% ' + yPos + 'px';
+     // Смещаем фон
+     $bgobj.css({backgroundPosition: coords});
+
+     });
+
+     });
+     */
+
 
 
 });

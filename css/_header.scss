@@ -104,12 +104,17 @@
   .main-header {
     margin-top: 1em;
   }
-  .header-manifest {
-    margin-top: 3.8em;
-  }
+
   h1 {
     font-size: 3.6em;
   }
+
+  .header-manifest {
+    margin-top: 3.8em;
+  }
+}
+
+.header-manifest {
   .characters {
     color: white;
     direction: rtl;

@@ -1,0 +1,26 @@
+.action {
+  background: url("../img/parallax-2-bg-hires.jpg") 50% 70% no-repeat fixed;
+  @media screen and (max-width: $screen-sm-max) {
+    background: url("../img/parallax-2-bg-lowres.jpg") center no-repeat fixed;
+  }
+  min-height: 36.7em;
+  padding-top: .5em;
+  overflow: hidden;
+  font-family: 'Fira Sans', sans-serif;
+  .contact-form {
+
+    .form-header {
+      position: relative;
+      margin: 0 auto;
+    }
+  }
+  .form-wrapper {
+    background: url("../img/bottom-form-bg.png") no-repeat center;
+    padding: .5em 2em;
+    max-width: 500px;
+    margin: 0 auto;
+    h2 {
+      margin-top: 0;
+    }
+  }
+}
