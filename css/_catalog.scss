@@ -1,4 +1,57 @@
 //BLOCK-3
 .catalog-section {
+  font-family: 'Fira Sans', sans-serif;
   background-color: #f5f5f5;
+  .catalog-item {
+    background-color: white;
+    position: relative;
+    border: 1px solid $gray-lighter;
+    height: 37em;
+    padding-top: 3em;
+    text-align: center;
+  }
+  .ribbon {
+    width: 9.500em;
+    height: 9.500em;
+    background: url("../img/ribbon.png") no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .item-photo {
+    width: 17.5em;
+    height: 17.5em;
+    margin: 0 auto 1.5em;
+  }
+  .top_two {
+    .item-photo {
+      background: url("../img/goods/item11-hires.jpg") center no-repeat;
+      background-size: 100%;
+      @media screen and (max-width: $screen-sm-max) {
+        background: url("../img/goods/item11-lowres.jpg") center no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  .item-name {
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+  .item-price {
+    color: $gray-light;
+    line-height: normal;
+    font-size: 1.3em;
+  }
+  .actual {
+    color: #dd2e25;
+    font-size: 1.8em;
+    font-weight: 500;
+  }
+  .buy-btn {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
 }

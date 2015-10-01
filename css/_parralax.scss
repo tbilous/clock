@@ -1,5 +1,8 @@
 #parallax-1 {
   background: url("../img/parallax-on-bg-hires.jpg") 50% 0 no-repeat fixed;
+  @media screen and (max-width: $screen-sm-max) {
+    background: url("../img/parallax-on-bg-lowres.jpg") center repeat fixed;
+  }
   min-height: 28.6em;
   margin: 0 auto;
   width: 100%;
