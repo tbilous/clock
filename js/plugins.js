@@ -149,7 +149,7 @@ $(document).ready(function () {
     $('.count').viewportChecker({
         classToAdd: 'start',
         classToRemove: 'start',
-        offset: 100,
+        offset: 200,
         repeat: true,
         callbackFunction: function runDigitFlow(elem, action) {
             $("[data-value]").each(function (i, el) {
