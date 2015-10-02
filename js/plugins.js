@@ -101,10 +101,7 @@ $(document).ready(function () {
                             //block.addClass('start');
                         }
                     }
-                } /*else {
-                    block.removeClass("animated");
-                    block.trigger('animateOut');
-                }*/
+                }
                 else {
                     if(!block.hasClass('no-repeat')){
                         block.removeClass(action).removeClass('start');
@@ -112,7 +109,6 @@ $(document).ready(function () {
                     }
                 }
             });
-            //console.log(action)
         });
 
         /* Time Parser */

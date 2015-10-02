@@ -37,6 +37,12 @@
       }
     }
   }
+  .top3 {
+    .item-photo {
+      background: url("../img/goods/item12-lowres.jpg") center no-repeat;
+      background-size: contain;
+    }
+  }
   .bottom1 {
     .item-photo {
       background: url("../img/goods/item20.jpg") center no-repeat;
@@ -46,6 +52,12 @@
   .bottom2 {
     .item-photo {
       background: url("../img/goods/item21.jpg") center no-repeat;
+      background-size: contain;
+    }
+  }
+  .bottom3 {
+    .item-photo {
+      background: url("../img/goods/item22.jpg") center no-repeat;
       background-size: contain;
     }
   }
