@@ -95,11 +95,11 @@ $(document).ready(function () {
                     if (block.hasClass('animated')) {
                         block.addClass(action);
                         block.css('animation-delay', delay+'s');
-                        block.trigger('animateIn');
-                    }
-                    if (block.hasClass('count')){
-                        block.addClass('start');
-                        block.trigger('animateIn');
+                        //block.trigger('animateIn');
+                        if (block.hasClass('steps')){
+                            block.addClass('start');
+                            //block.addClass('start');
+                        }
                     }
                 } /*else {
                     block.removeClass("animated");
@@ -107,7 +107,7 @@ $(document).ready(function () {
                 }*/
                 else {
                     if(!block.hasClass('no-repeat')){
-                        block.removeClass(action);
+                        block.removeClass(action).removeClass('start');
                         block.trigger('animateOut');
                     }
                 }
@@ -121,6 +121,7 @@ $(document).ready(function () {
             console.log(this)
         });
 
+        //$('start').trigger('animateIn');
         $(".steps").on("animateIn",function() {
             var inter = 1;
             $(this).find(".count").each(function() {
@@ -135,16 +136,39 @@ $(document).ready(function () {
                     }
                 }, 60);
             });
-        }).on('animateOut', function() {
+        });
+        /*.on('animateOut', function() {
             $(this).find('.anim').each(function() {
                 $(this).css('opacity', 0.01);
                 $(this).css({'-webkit-transform': 'scale(0.7, 0.7)', '-moz-transform': 'scale(0.7, 0.7)'});
             });
-        });
+        });*/
 
         //$('head').append('<link rel="stylesheet" href="/css/animate.min.css">');
     }
+    $('.count').viewportChecker({
+        classToAdd: 'start',
+        classToRemove: 'start',
+        offset: 100,
+        repeat: true,
+        callbackFunction: function runDigitFlow(elem, action) {
+            $("[data-value]").each(function (i, el) {
+                var targetValue = $(el).attr('data-value');
+                var curValue = 1;
+                //var curValue = parseInt($("[data-number]").html());
+                var intervalHandle = setInterval(function () {
+                    var delta = Math.round(Math.max(Math.min((targetValue - curValue) / 7, 59), 1));
+                    console.log(curValue >= targetValue);
 
+                    curValue = curValue + delta;
+                    $(el).html(curValue);
+
+                    if (curValue >= targetValue)
+                        clearInterval(intervalHandle);
+                }, 50);
+            });
+        }
+    });
 
 
 });
