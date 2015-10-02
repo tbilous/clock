@@ -59,21 +59,92 @@ $(document).ready(function () {
 
     //PARALLAX
 
-    $('div[data-type="background"]').each(function () {
+    $('.parallax[data-type="background"]').each(function () {
         var $bgobj = $(this); // Назначаем объек
         $(window).scroll(function () {
-            // Прокручиваем фон со скоростью var.
-            // Значение yPos отрицательное, так как прокручивание осуществляется вверх!
             var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-
-            // Размещаем все вместе в конечной точке
             var coords = '50% ' + yPos + 'px';
-
-            // Смещаем фон
             $bgobj.css({backgroundPosition: coords});
         });
 
     });
+
+    //VIEWPORT CHECK
+
+    /* Mobile & Animation */
+    var Android = navigator.userAgent.search(/Android/i);
+    var iPhone = navigator.userAgent.search(/iPhone/i);
+    var iPad = navigator.userAgent.search(/iPad/i);
+    if (Android != -1 || iPhone != -1 || iPad != -1) {
+        $('html').css('width', window.innerWidth + 'px');
+    } else {
+        $(".scroll").each(function() {
+            var block = $(this);
+            var action = $(this).data('action');
+            var delay = $(this).data('delay');
+            $(window).scroll(function() {
+                var top = block.offset().top;
+                var bottom = block.height() + top;
+                top = top - $(window).height();
+                var scroll_top = $(this).scrollTop();
+                if ((scroll_top > top) && (scroll_top < bottom)) {
+/*                    if (!block.hasClass("animated")) {
+                        block.addClass("animated");
+                        block.trigger('animateIn');
+                    }      */
+                    if (block.hasClass('animated')) {
+                        block.addClass(action);
+                        block.css('animation-delay', delay+'s');
+                        block.trigger('animateIn');
+                    }
+                    if (block.hasClass('count')){
+                        block.addClass('start');
+                        block.trigger('animateIn');
+                    }
+                } /*else {
+                    block.removeClass("animated");
+                    block.trigger('animateOut');
+                }*/
+                else {
+                    if(!block.hasClass('no-repeat')){
+                        block.removeClass(action);
+                        block.trigger('animateOut');
+                    }
+                }
+            });
+            //console.log(action)
+        });
+
+        /* Time Parser */
+        $(".steps .count").each(function() {
+            $(this).attr("data-number", parseInt($(this).text()));
+            console.log(this)
+        });
+
+        $(".steps").on("animateIn",function() {
+            var inter = 1;
+            $(this).find(".count").each(function() {
+                var count = parseInt($(this).attr("data-number")), block = $(this), timeout = null, step = 1;
+                timeout = setInterval(function() {
+                    if (step == 25) {
+                        block.text(count.toString());
+                        clearInterval(timeout);
+                    } else {
+                        block.text((Math.floor(count * step / 25)).toString());
+                        step++;
+                    }
+                }, 60);
+            });
+        }).on('animateOut', function() {
+            $(this).find('.anim').each(function() {
+                $(this).css('opacity', 0.01);
+                $(this).css({'-webkit-transform': 'scale(0.7, 0.7)', '-moz-transform': 'scale(0.7, 0.7)'});
+            });
+        });
+
+        //$('head').append('<link rel="stylesheet" href="/css/animate.min.css">');
+    }
+
 
 
 });
