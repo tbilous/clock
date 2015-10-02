@@ -137,14 +137,7 @@ $(document).ready(function () {
                 }, 60);
             });
         });
-        /*.on('animateOut', function() {
-            $(this).find('.anim').each(function() {
-                $(this).css('opacity', 0.01);
-                $(this).css({'-webkit-transform': 'scale(0.7, 0.7)', '-moz-transform': 'scale(0.7, 0.7)'});
-            });
-        });*/
 
-        //$('head').append('<link rel="stylesheet" href="/css/animate.min.css">');
     }
     $('.count').viewportChecker({
         classToAdd: 'start',
