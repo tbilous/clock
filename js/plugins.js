@@ -78,32 +78,32 @@ $(document).ready(function () {
     if (Android != -1 || iPhone != -1 || iPad != -1) {
         $('html').css('width', window.innerWidth + 'px');
     } else {
-        $(".scroll").each(function() {
+        $(".scroll").each(function () {
             var block = $(this);
             var action = $(this).data('action');
             var delay = $(this).data('delay');
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 var top = block.offset().top;
                 var bottom = block.height() + top;
                 top = top - $(window).height();
                 var scroll_top = $(this).scrollTop();
                 if ((scroll_top > top) && (scroll_top < bottom)) {
-/*                    if (!block.hasClass("animated")) {
-                        block.addClass("animated");
-                        block.trigger('animateIn');
-                    }      */
+                    /*                    if (!block.hasClass("animated")) {
+                     block.addClass("animated");
+                     block.trigger('animateIn');
+                     }      */
                     if (block.hasClass('animated')) {
                         block.addClass(action);
-                        block.css('animation-delay', delay+'s');
+                        block.css('animation-delay', delay + 's');
                         //block.trigger('animateIn');
-                        if (block.hasClass('steps')){
+                        if (block.hasClass('steps')) {
                             block.addClass('start');
                             //block.addClass('start');
                         }
                     }
                 }
                 else {
-                    if(!block.hasClass('no-repeat')){
+                    if (!block.hasClass('no-repeat')) {
                         block.removeClass(action).removeClass('start');
                         block.trigger('animateOut');
                     }
@@ -112,17 +112,17 @@ $(document).ready(function () {
         });
 
         /* Time Parser */
-        $(".steps .count").each(function() {
+        $(".steps .count").each(function () {
             $(this).attr("data-number", parseInt($(this).text()));
             console.log(this)
         });
 
         //$('start').trigger('animateIn');
-        $(".steps").on("animateIn",function() {
+        $(".steps").on("animateIn", function () {
             var inter = 1;
-            $(this).find(".count").each(function() {
+            $(this).find(".count").each(function () {
                 var count = parseInt($(this).attr("data-number")), block = $(this), timeout = null, step = 1;
-                timeout = setInterval(function() {
+                timeout = setInterval(function () {
                     if (step == 25) {
                         block.text(count.toString());
                         clearInterval(timeout);
@@ -135,7 +135,7 @@ $(document).ready(function () {
         });
 
     }
-    $('.count').viewportChecker({
+    $('.count').delay(800).viewportChecker({
         classToAdd: 'start',
         classToRemove: 'start',
         offset: 200,
@@ -158,6 +158,11 @@ $(document).ready(function () {
             });
         }
     });
-
+    $('.action').parallax({
+            imageSrc: 'img/parallax-2-bg-hires.jpg',
+            speed: 0.3,
+            positionY: 'bottom'
+        }
+    );
 
 });

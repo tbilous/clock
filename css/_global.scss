@@ -116,5 +116,16 @@ input, a, button, textarea, .btn {
 }
 .animated{
   opacity: 0;
-  //animation-delay: .5s;
+  &.visible{
+    opacity: 1;
+  }
+}
+.bg-block{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+.spacer{
+  padding-top: 100%;
 }
