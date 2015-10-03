@@ -68,7 +68,6 @@ input, a, button, textarea, .btn {
   color: #dd2e25;
 }
 
-
 .medium {
   font-weight: 500;
 }
@@ -94,6 +93,7 @@ input, a, button, textarea, .btn {
     display: none;
   }
 }
+
 .btn-lg {
   line-height: 3.571em;
   padding: 0;
@@ -114,18 +114,31 @@ input, a, button, textarea, .btn {
 .parallax-block {
   background-color: transparent;
 }
-.animated{
+
+.animated {
   opacity: 0;
-  &.visible{
+  &.visible {
     opacity: 1;
   }
 }
-.bg-block{
+
+.bg-block {
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
 }
-.spacer{
+
+.spacer {
   padding-top: 100%;
+}
+
+.counter {
+  max-width: 330px;
+  height: 140px;
+  display: inline-block;
+  padding-top: 8px;
+  &.top, &.bottom{
+    background-color: white;
+  }
 }

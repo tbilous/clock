@@ -1,0 +1,55 @@
+@import "flipclock.css";
+
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/MyriadProRegular.woff") format("woff"),
+  url("../fonts/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.flip-clock-wrapper{
+  display: block;
+}
+.flip {
+  font-family: 'MyriadProRegular', sans-serif;
+  position: relative;
+  .inn {
+    &::before {
+      content: url("../img/flip/flip-clock-line.png");
+      display: block;
+      position: absolute;
+      bottom: 18px;
+    }
+
+    background-image: url("../img/flip/flip-bg.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.flip::before {
+  content: url("../img/flip/flip-bg.png");
+  position: absolute;
+  left: -2px;
+  top: -3px;
+}
+
+.flip-clock-divider {
+  &.minutes {
+    .flip-clock-label {
+      right: -70px;
+    }
+  }
+  &.hours {
+    .flip-clock-label {
+      right: -66px;
+    }
+  }
+  &.seconds {
+    .flip-clock-label {
+      right: -71px;
+    }
+  }
+}

@@ -47,11 +47,13 @@
                 <li class=""><a class="anchor" href="#why"><span>Почему G-SHOCK?</span></a></li>
                 <li><a class="anchor" href="#catalog"><span>КАТАЛОГ SKMEI</span></a></li>
                 <li><a class="anchor" href="#as"><span>Как мы работаем</span></a></li>
-                <li><a class="anchor" href="#"><span>Отзывы</span></a></li>
-                <li><a class="anchor" href="#"><span>Видео</span></a></li>
-                <li><a class="anchor" href="#"><span>Гарантия</span></a></li>
-                <li><a class="anchor" href="#"><span>Вопросы</span></a></li>
-                <li class="red-nav"><a class="anchor" href="#parallax-2"><span>Купить сейчас</span></a></li>
+                <li><a class="anchor" href="#feedback"><span>Отзывы</span></a></li>
+                <li><a class="anchor" href="#video"><span>Видео</span></a></li>
+                <li><a class="anchor" href="#waranty"><span>Гарантия</span></a></li>
+                <li><a class="anchor" href="#faq"><span>Вопросы</span></a></li>
+                <li class="red-nav"><a class="start-modal" data-toggle="modal"
+                                       data-target="#orderModal" href="javascript.void("><span>Купить сейчас</span></a>
+                </li>
             </ul>
         </div>
         <!--/.nav-collapse -->
@@ -85,8 +87,11 @@
                     </ul>
                     <div class="text-right">
                 <span class="counter top text-center"
-                      style="width: 330px; height: 140px; background-color: white; display: inline-block">
-                    CLOCK
+                      style="">
+                    <span class="text-center red-color text-uppercase medium">до конца акции:</span>
+
+                    <span class="clock-top"></span>
+
                 </span>
                     </div>
                 </div>
@@ -108,7 +113,7 @@
                                 </div>
                             </div>
 
-                            <form id="topForm" class="form top">
+                            <form id="headerForm" class="form top">
                                 <div class="form-header"></div>
                                 <input type="hidden" value="Заказ"/>
 
@@ -477,8 +482,9 @@
                     </ul>
                     <div class="count-wrapper">
                         <span class="counter middle text-center"
-                              style="width: 330px; height: 140px; display: inline-block">
-                            CLOCK
+                              style="">
+                            <span class="text-center red-color text-uppercase medium">до конца акции:</span>
+                            <span class="clock"></span>
                         </span>
                     </div>
                 </div>
@@ -501,7 +507,7 @@
                                     </div>
                                 </div>
 
-                                <form id="bottomForm" class="form top">
+                                <form id="actionForm0" class="form top">
                                     <div class="form-header"></div>
                                     <input type="hidden" value="Заказ"/>
 
@@ -523,8 +529,8 @@
         </div>
     </div>
 </div>
-<!--ABOUT US-->
-<section class="about_us-section" id="about_Us">
+<!--AFEEDBACK-->
+<section class="about_us-section" id="feedback">
     <div class="bg-block gradient"></div>
     <div class="container relative">
         <div class="section-header">
@@ -630,7 +636,6 @@
         <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/3slNOiVIT1U?rel=0&amp;hd=1"
                     allowfullscreen></iframe>
-            <!--            <iframe width="560" height="315" src="https://www.youtube.com/embed/3slNOiVIT1U" frameborder="0" allowfullscreen></iframe>-->
         </div>
     </div>
 </section>
@@ -657,9 +662,9 @@
                         <li>Вес: 55г Гарантия: 365 дней</li>
                     </ul>
                     <div class="count-wrapper">
-                        <span class="counter middle text-center"
-                              style="width: 330px; height: 140px; display: inline-block">
-                            CLOCK
+                        <span class="counter bottom text-center">
+                            <span class="text-center red-color text-uppercase medium">до конца акции:</span>
+                            <span class="clock-bottom"></span>
                         </span>
                     </div>
                 </div>
@@ -704,6 +709,7 @@
         </div>
     </div>
 </div>
+<!--WARRANTY-->
 <section class="warranty-section" id="waranty">
     <div class="container">
         <div class="section-header">
@@ -754,7 +760,7 @@
                 </div>
             </div>
         </div>
-        <div class="faq">
+        <div class="faq" id="faq">
             <div class="section-header">
                 <h2>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
             </div>
@@ -842,22 +848,91 @@
                     <h3>ОСТАЛИСЬ ВОПРОСЫ?</h3>
                 </div>
                 <div class="col-sm-6 right-section">
-                    <a href="javascript.void()" class="btn btn-lg btn-warning">ЗАДАЙТЕ ИХ СЕЙЧАС</a>
+                    <a href="javascript.void()" class="btn btn-lg btn-warning start-modal" data-toggle="modal"
+                       data-target="#orderModal">ЗАДАЙТЕ ИХ СЕЙЧАС</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<footer style="background-color: black; min-height: 100px">
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h5>Способы оплаты</h5>
+                <ul class="payment-block">
+                    <li class="pay-icon cash">
+                    <li class="pay-icon nposhta">
+                    <li class="pay-icon maestro">
+                    <li class="pay-icon visa">
+                    <li class="pay-icon vallet">
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h5>Способы доставки</h5>
+                <ul class="delivery-block">
+                    <li class="delivery nposhta">
+                    <li class="delivery autolux">
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h5>Наши партнеры</h5>
+                <ul class="partners-block">
+                    <li class="partner casio">
+                    <li class="partner ozon">
+                </ul>
+            </div>
+        </div>
+        <div class="footer-header text-center">
+            <h3 class="white-color">(093)-53-46-46-1 (066)-25-15-333 (097)-888-43-86</h3>
+            <a href="javascript.void()" class="start-modal" data-toggle="modal"
+               data-target="#orderModal">ПЕРЕЗВОНИТЕ МНЕ В ТЕЧЕНИЕ 2 МИНУТ</a>
+            <a hre class="btn-up anchor" href="#home"></a>
+        </div>
+        <span class="copy">&copy; 2015 Empire of Marketing. All rights reserved.</span>
+    </div>
 
 </footer>
+
+<!--MODAL-->
+<div class="modal fade feedback-modal" id="orderModal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+
+            <div class="modal-body">
+
+                <h2 class="modal-header orange">перезвоним за <br/> две минуты</h2>
+
+                <p class="text-center">Заполните форму и мы свяжемся с вами</p>
+
+                <form id="requestForm" class="text-center">
+                    <input name="formtitle" type="hidden" value="Order"/>
+
+                    <div class="input-group">
+                        <input name="name" class="name_input" type="text" required="required"
+                               placeholder="Введите имя"/>
+                    </div>
+                    <div class="input-group">
+                        <input name="phone" class="name_input" type="text" required="required"
+                               placeholder="Введите телефон"/>
+                    </div>
+
+                    <input type="submit" class="btn btn-lg btn-warning"/>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/vendor/viewportchecker.min.js"></script>
 <script src="js/vendor/parallax.min.js"></script>
+<script src="js/vendor/moment.min.js"></script>
+<script src="js/vendor/flipclock.min.js"></script>
 
 <script src="js/plugins.js"></script>
 

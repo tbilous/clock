@@ -158,6 +158,7 @@ $(document).ready(function () {
             });
         }
     });
+//PARALLAX
     $('.action').parallax({
             imageSrc: 'img/parallax-2-bg-hires.jpg',
             speed: 0.3,
@@ -170,5 +171,98 @@ $(document).ready(function () {
             positionY: 'top'
         }
     );
+//CLOCK
+    var tomorrow = moment().endOf('day').valueOf() + 1;
+    var now = moment().valueOf();
+    var interval = (tomorrow - now) / 1000;
+    var clock = $('.clock').FlipClock(interval, {
+        clockFace: 'HourlyCounter',
+        countdown: true,
+        language: 'ru',
+        showSeconds: false
+    });
+    var clockTop = $('.clock-top').FlipClock(interval, {
+        clockFace: 'HourlyCounter',
+        countdown: true,
+        language: 'ru',
+        showSeconds: false
+    });
+    var clockBottom = $('.clock-bottom').FlipClock(interval, {
+        clockFace: 'HourlyCounter',
+        countdown: true,
+        language: 'ru',
+        showSeconds: false
+    });
+
+//CENTERED MODAL
+    $(".start-modal").click(function () {
+        var d_tar = $(this).attr('data-target');
+        $(d_tar).show();
+        var modal_he = $(d_tar).find('.modal-dialog .modal-content').height();
+        var win_height = $(window).height();
+        var marr = win_height - modal_he;
+        $('.modal-dialog').css('margin-top', marr / 2);
+    });
+//RESET FORM
+    function resetForm(formid) {
+        $(':input', formid).not(':button, :submit, :reset, :hidden').val('')
+            .removeAttr('checked').removeAttr('selected');
+    }
+
+//SUBMIT FORM
+    //MODAL FORM
+    $("#requestForm").submit(function () {
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //mail script
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            //alert("true offersForm");
+            resetForm('#requestForm');
+        });
+        $('#orderModal').modal('hide');
+        return false;
+    });
+//HEADER COUNT FORM
+    $("#headerForm").submit(function () {
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //mail script
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            //alert("true headerForm");
+            resetForm('#headerForm');
+        });
+        return false;
+    });
+//Query-block FORM
+    $("#bottomForm0").submit(function () {
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //mail script
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            //alert("true bottomForm0");
+            resetForm('#bottomForm0');
+        });
+        return false;
+    });
+//BODY COUNER-FORM
+    $("#bottomForm1").submit(function () {
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //mail script
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            //alert("true bottomForm1");
+            resetForm('#bottomForm1');
+        });
+        return false;
+    });
+
 
 });

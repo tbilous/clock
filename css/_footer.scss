@@ -1,0 +1,96 @@
+.footer {
+  color: white;
+  padding-top: 1.7em;
+  padding-bottom: 1.7em;
+  position: relative;
+  background: url("../img/footer-bg.jpg");
+  h5 {
+    color: white;
+    text-align: center;
+  }
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  .pay-icon {
+    width: 3.6em;
+    height: 2.6em;
+    margin-right: 5px;
+  }
+  .cash {
+    background: url("../img/cash.png") no-repeat center;
+    background-size: 100%;
+  }
+  .nposhta {
+    background: url("../img/nposhta.png") no-repeat center;
+    background-size: 100%;
+  }
+  .maestro {
+    background: url("../img/maestro.png") no-repeat center;
+    background-size: 100%;
+  }
+  .visa {
+    background: url("../img/visa.png") no-repeat center;
+    background-size: 100%;
+  }
+  .vallet {
+    background: url("../img/wallet.png") no-repeat center;
+    background-size: 100%;
+  }
+  .delivery-block, .partners-block {
+    text-align: center;
+  }
+  .delivery {
+    width: 3.6em;
+    height: 2.6em;
+    margin-right: 5px;
+  }
+  .autolux {
+    background: url("../img/autolux.jpg") no-repeat center;
+    background-size: 100%;
+    border-radius: 2px;
+  }
+
+  .partner {
+    width: 5em;
+    height: 3em;
+    &.casio {
+      background: url("../img/casio_logo.png") no-repeat center;
+      background-size: 100%;
+      margin-right: 2em;
+    }
+    &.ozon {
+      background: url("../img/ozon.png") no-repeat center;
+      background-size: 100%;
+    }
+  }
+  .copy, .footer-header {
+    font-family: "Fira Sans", sans-serif;
+  }
+  .footer-header {
+    margin-bottom: 2.2em;
+    a {
+
+      color: #dd2e25;
+      font-size: 1.2em;
+      &:hover {
+        color: #dd2e25;
+        text-decoration: none;
+        font-weight: 500;
+      }
+    }
+  }
+  .btn-up{
+    position: absolute;
+    width: 2.2em;
+    height: 2.2em;
+    left: 50%;
+    margin-left: -1.1em;
+    bottom: 1em;
+    background: url("../img/up.png");
+    background-size: 100%;
+  }
+}

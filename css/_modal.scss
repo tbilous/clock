@@ -1,0 +1,57 @@
+.feedback-modal {
+  @media screen and (max-width: $screen-sm-min) {
+    font-size: 10px;
+  }
+  .modal-header{
+    opacity: .8;
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .modal-content {
+    border-radius: 0;
+    padding: 1.5em;
+  }
+  .modal-body {
+    -webkit-box-shadow: 0 0 0 5px $brand-warning;
+    -moz-box-shadow: 0 0 0 5px $brand-warning;
+    box-shadow: 0 0 0 5px $brand-warning;
+    border-radius: 0;
+  }
+  .hidden-input {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    padding: 0;
+    position: absolute;
+    border: none;
+  }
+  .input-group {
+    margin-bottom: .5em;
+    padding: .2em;
+    width: 100%;
+    input {
+
+    }
+  }
+  .btn {
+    width: 80%;
+    margin-bottom: 1em;
+    font-style: normal;
+  }
+  input, .message {
+    padding: 1em;
+    width: 80%
+  }
+  input[type="submit"] {
+    padding: 0;
+    margin-bottom: 3em;
+    margin-top: 3em;
+  }
+
+  .message {
+    resize: none;
+
+  }
+}
