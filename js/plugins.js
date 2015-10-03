@@ -164,5 +164,11 @@ $(document).ready(function () {
             positionY: 'bottom'
         }
     );
+    $('.action1').parallax({
+            imageSrc: 'img/parallax-3-bg-hires.jpg',
+            speed: 0.3,
+            positionY: 'top'
+        }
+    );
 
 });
