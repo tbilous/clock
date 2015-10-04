@@ -1,5 +1,8 @@
-@import "scss/bootstrap-sprockets";
+@import "compass";
+//@import "scss/bootstrap-sprockets";
+@import "scss/bootstrap-compass";
 @import "scss/bootstrap";
+@import "animate.min.css";
 @import "global";
 @import "header";
 @import "why";

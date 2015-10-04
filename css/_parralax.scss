@@ -9,3 +9,20 @@
   position: relative;
   padding-top: 3.5em;
 }
+
+#action {
+  background: url("../img/parallax-2-bg-hires.jpg") 50% 0 no-repeat fixed;
+  @media screen and (max-width: $screen-sm-max) {
+    background: url("../img/parallax-2-bg-lowres.jpg") center repeat fixed;
+  }
+  margin: 0 auto;
+  position: relative;
+}
+#action1 {
+  background: url("../img/parallax-3-bg-hires.jpg") 50% 0 no-repeat fixed;
+  @media screen and (max-width: $screen-sm-max) {
+    background: url("../img/parallax-3-bg-lowres.jpg") center repeat fixed;
+  }
+  margin: 0 auto;
+  position: relative;
+}

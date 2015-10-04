@@ -2,8 +2,9 @@
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 
 
-/.idea/
-css/styles.css.map
-css/styles.css
+
 js/plugins.min.js
 addons
+.sass-cache
+node_modules
+.idea

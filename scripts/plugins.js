@@ -32,14 +32,9 @@ $(document).ready(function () {
 //SCROLL TO ANCHOR
     function scroll_if_anchor(href) {
         href = typeof(href) == "string" ? href : $(this).attr("href");
-        // You could easily calculate this dynamically if you prefer
         var fromTop = 50;
-        // If our Href points to a valid, non-empty anchor, and is on the same page (e.g. #foo)
-        // Legacy jQuery and IE7 may have issues: http://stackoverflow.com/q/1593174
         if (href.indexOf("#") == 0) {
             var $target = $(href);
-            // Older browser without pushState might flicker here, as they momentarily
-            // jump to the wrong position (IE < 10)
             if ($target.length) {
                 var time = 1000;
                 $('html, body').animate({scrollTop: $target.offset().top - fromTop}, time);
@@ -53,21 +48,7 @@ $(document).ready(function () {
 
 // Intercept all anchor clicks
     $("body").on("click", ".anchor", scroll_if_anchor);
-    // Кешируем объект окна
     $window = $(window);
-
-
-    //PARALLAX
-
-    $('.parallax[data-type="background"]').each(function () {
-        var $bgobj = $(this); // Назначаем объек
-        $(window).scroll(function () {
-            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-            var coords = '50% ' + yPos + 'px';
-            $bgobj.css({backgroundPosition: coords});
-        });
-
-    });
 
     //VIEWPORT CHECK
 
@@ -88,17 +69,11 @@ $(document).ready(function () {
                 top = top - $(window).height();
                 var scroll_top = $(this).scrollTop();
                 if ((scroll_top > top) && (scroll_top < bottom)) {
-                    /*                    if (!block.hasClass("animated")) {
-                     block.addClass("animated");
-                     block.trigger('animateIn');
-                     }      */
                     if (block.hasClass('animated')) {
                         block.addClass(action);
                         block.css('animation-delay', delay + 's');
-                        //block.trigger('animateIn');
                         if (block.hasClass('steps')) {
                             block.addClass('start');
-                            //block.addClass('start');
                         }
                     }
                 }
@@ -114,7 +89,7 @@ $(document).ready(function () {
         /* Time Parser */
         $(".steps .count").each(function () {
             $(this).attr("data-number", parseInt($(this).text()));
-            console.log(this)
+            //console.log(this)
         });
 
         //$('start').trigger('animateIn');
@@ -135,7 +110,7 @@ $(document).ready(function () {
         });
 
     }
-    $('.count').delay(800).viewportChecker({
+    $('.count').viewportChecker({
         classToAdd: 'start',
         classToRemove: 'start',
         offset: 200,
@@ -147,7 +122,7 @@ $(document).ready(function () {
                 //var curValue = parseInt($("[data-number]").html());
                 var intervalHandle = setInterval(function () {
                     var delta = Math.round(Math.max(Math.min((targetValue - curValue) / 7, 59), 1));
-                    console.log(curValue >= targetValue);
+                    //console.log(curValue >= targetValue);
 
                     curValue = curValue + delta;
                     $(el).html(curValue);
@@ -158,19 +133,49 @@ $(document).ready(function () {
             });
         }
     });
+
+    //PARALLAX
+    $('.parallax[data-type="background"]').each(function () {
+        var $bgobj = $(this); // Назначаем объек
+        $(window).scroll(function () {
+            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+            var coords = '50% ' + yPos + 'px';
+            $bgobj.css({backgroundPosition: coords});
+        });
+
+    });
+    $('.action[data-type="background"]').each(function () {
+        var $bgobj = $(this); // Назначаем объек
+        $(window).scroll(function () {
+            var yPos = -(($window.scrollTop()/2) / $bgobj.data('speed'));
+            var coords = '50% ' + yPos + 'px';
+            $bgobj.css({backgroundPosition: coords});
+        });
+
+    });
+    $('.action1[data-type="background"]').each(function () {
+        var $bgobj = $(this); // Назначаем объек
+        $(window).scroll(function () {
+            var yPos = -(($window.scrollTop()/3) / $bgobj.data('speed'));
+            var coords = '50% ' + yPos + 'px';
+            $bgobj.css({backgroundPosition: coords});
+        });
+
+    });
+
 //PARALLAX
-    $('.action').parallax({
+/*    $('.action').parallax({
             imageSrc: 'img/parallax-2-bg-hires.jpg',
             speed: 0.3,
             positionY: 'bottom'
         }
-    );
-    $('.action1').parallax({
+    );*/
+/*    $('.action1').parallax({
             imageSrc: 'img/parallax-3-bg-hires.jpg',
             speed: 0.3,
             positionY: 'top'
         }
-    );
+    );*/
 //CLOCK
     var tomorrow = moment().endOf('day').valueOf() + 1;
     var now = moment().valueOf();
@@ -218,7 +223,7 @@ $(document).ready(function () {
             data: $(this).serialize()
         }).done(function () {
             $(this).find("input").val("");
-            //alert("true offersForm");
+            alert("true offersForm");
             resetForm('#requestForm');
         });
         $('#orderModal').modal('hide');
@@ -232,7 +237,7 @@ $(document).ready(function () {
             data: $(this).serialize()
         }).done(function () {
             $(this).find("input").val("");
-            //alert("true headerForm");
+            alert("true headerForm");
             resetForm('#headerForm');
         });
         return false;
@@ -245,7 +250,7 @@ $(document).ready(function () {
             data: $(this).serialize()
         }).done(function () {
             $(this).find("input").val("");
-            //alert("true bottomForm0");
+            alert("true bottomForm0");
             resetForm('#bottomForm0');
         });
         return false;
@@ -258,11 +263,9 @@ $(document).ready(function () {
             data: $(this).serialize()
         }).done(function () {
             $(this).find("input").val("");
-            //alert("true bottomForm1");
+            alert("true bottomForm1");
             resetForm('#bottomForm1');
         });
         return false;
     });
-
-
 });
