@@ -243,7 +243,7 @@ $(document).ready(function () {
         return false;
     });
 //Query-block FORM
-    $("#bottomForm0").submit(function () {
+    $("#actionForm0").submit(function () {
         $.ajax({
             type: "POST",
             url: "mail.php", //mail script
@@ -256,7 +256,7 @@ $(document).ready(function () {
         return false;
     });
 //BODY COUNER-FORM
-    $("#bottomForm1").submit(function () {
+    $("#actionForm1").submit(function () {
         $.ajax({
             type: "POST",
             url: "mail.php", //mail script
