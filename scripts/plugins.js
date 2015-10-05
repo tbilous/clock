@@ -23,6 +23,101 @@
 }());
 
 $(document).ready(function () {
+
+    var date = new Date();
+    date.setDate(date.getDate() + 1);
+    $(".daynow").text(date.getDate());
+    var month = date.getMonth();
+    switch(month) {
+        case 0:
+        {
+            $(".monthnow").text('января');
+            break;
+        }
+        case 1:
+        {
+            $(".monthnow").text('февраля');
+            break;
+        }
+        case 2:
+        {
+            $(".monthnow").text('марта');
+            break;
+        }
+        case 3:
+        {
+            $(".monthnow").text('апреля');
+            break;
+        }
+        case 4:
+        {
+            $(".monthnow").text('мая');
+            break;
+        }
+        case 5:
+        {
+            $(".monthnow").text('июня');
+            break;
+        }
+        case 6:
+        {
+            $(".monthnow").text('июля');
+            break;
+        }
+        case 7:
+        {
+            $(".monthnow").text('августа');
+            break;
+        }
+        case 8:
+        {
+            $(".monthnow").text('сентября');
+            break;
+        }
+        case 9:
+        {
+            $(".monthnow").text('октября');
+            break;
+        }
+        case 10:
+        {
+            $(".monthnow").text('ноября');
+            break;
+        }
+        case 11:
+        {
+            $(".monthnow").text('декабря');
+            break;
+        }
+    }
+    dateEnd = date;
+    console.log(dateEnd);
+
+    //CLOCK
+    var tomorrow = moment().endOf('day').valueOf() + 1;
+    //var end = moment("2015-10-31").valueOf()+1; //ТУТ МЕНЯТЬ ДАТУ ФОРМАТ: "ГОД - МЕСЯЦ - ЧИСЛО"
+    var now = moment().valueOf();
+    var interval = (tomorrow - now) / 1000;
+    var clock = $('.clock').FlipClock(interval, {
+        clockFace: 'HourlyCounter',
+        countdown: true,
+        language: 'ru',
+        showSeconds: false
+    });
+    var clockTop = $('.clock-top').FlipClock(interval, {
+        clockFace: 'HourlyCounter',
+        countdown: true,
+        language: 'ru',
+        showSeconds: false
+    });
+    var clockBottom = $('.clock-bottom').FlipClock(interval, {
+        clockFace: 'HourlyCounter',
+        countdown: true,
+        language: 'ru',
+        showSeconds: false
+    });
+
+
     $('.nav-justified a').click(function (e) {
         e.preventDefault();
         $('.nav-justified > li').removeClass('active');
@@ -136,7 +231,7 @@ $(document).ready(function () {
 
     //PARALLAX
     $('.parallax[data-type="background"]').each(function () {
-        var $bgobj = $(this); // ��������� �����
+        var $bgobj = $(this); // ��������� �����
         $(window).scroll(function () {
             var yPos = -($window.scrollTop() / $bgobj.data('speed'));
             var coords = '50% ' + yPos + 'px';
@@ -145,7 +240,7 @@ $(document).ready(function () {
 
     });
     $('.action[data-type="background"]').each(function () {
-        var $bgobj = $(this); // ��������� �����
+        var $bgobj = $(this); // ��������� �����
         $(window).scroll(function () {
             var yPos = -(($window.scrollTop()/2) / $bgobj.data('speed'));
             var coords = '50% ' + yPos + 'px';
@@ -154,7 +249,7 @@ $(document).ready(function () {
 
     });
     $('.action1[data-type="background"]').each(function () {
-        var $bgobj = $(this); // ��������� �����
+        var $bgobj = $(this); // ��������� �����
         $(window).scroll(function () {
             var yPos = -(($window.scrollTop()/3) / $bgobj.data('speed'));
             var coords = '50% ' + yPos + 'px';
@@ -176,28 +271,6 @@ $(document).ready(function () {
             positionY: 'top'
         }
     );*/
-//CLOCK
-    var tomorrow = moment().endOf('day').valueOf() + 1;
-    var now = moment().valueOf();
-    var interval = (tomorrow - now) / 1000;
-    var clock = $('.clock').FlipClock(interval, {
-        clockFace: 'HourlyCounter',
-        countdown: true,
-        language: 'ru',
-        showSeconds: false
-    });
-    var clockTop = $('.clock-top').FlipClock(interval, {
-        clockFace: 'HourlyCounter',
-        countdown: true,
-        language: 'ru',
-        showSeconds: false
-    });
-    var clockBottom = $('.clock-bottom').FlipClock(interval, {
-        clockFace: 'HourlyCounter',
-        countdown: true,
-        language: 'ru',
-        showSeconds: false
-    });
 
 //CENTERED MODAL
     $(".start-modal").click(function () {
