@@ -63,7 +63,7 @@
       margin-right: 2em;
     }
     &.ozon {
-      background: url("../img/ozon.png") no-repeat center;
+      background: url("../img/lamoda.png") no-repeat center top;
       background-size: 100%;
     }
   }
@@ -72,6 +72,9 @@
   }
   .footer-header {
     margin-bottom: 2.2em;
+    h3{
+      font-size: 2em;
+    }
     a {
 
       color: #dd2e25;
