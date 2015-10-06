@@ -243,7 +243,7 @@ $(document).ready(function () {
     $('.action[data-type="background"]').each(function () {
         var $bgobj = $(this); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         $(window).scroll(function () {
-            var yPos = -(($window.scrollTop()/2) / $bgobj.data('speed'));
+            var yPos = -(($window.scrollTop()/3) / $bgobj.data('speed'));
             var coords = '50% ' + yPos + 'px';
             $bgobj.css({backgroundPosition: coords});
         });
@@ -252,7 +252,7 @@ $(document).ready(function () {
     $('.action1[data-type="background"]').each(function () {
         var $bgobj = $(this); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         $(window).scroll(function () {
-            var yPos = -(($window.scrollTop()/3) / $bgobj.data('speed'));
+            var yPos = -(($window.scrollTop()/5) / $bgobj.data('speed'));
             var coords = '50% ' + yPos + 'px';
             $bgobj.css({backgroundPosition: coords});
         });
