@@ -90,12 +90,13 @@ $(document).ready(function () {
             break;
         }
     }
+
     dateEnd = date;
     console.log(dateEnd);
 
     //CLOCK
     var tomorrow = moment().endOf('day').valueOf() + 1;
-    //var end = moment("2015-10-31").valueOf()+1; //ТУТ МЕНЯТЬ ДАТУ ФОРМАТ: "ГОД - МЕСЯЦ - ЧИСЛО"
+    //var end = moment("2015-10-31").valueOf()+1; //РўРЈРў РњР•РќРЇРўР¬ Р”РђРўРЈ Р¤РћР РњРђРў: "Р“РћР” - РњР•РЎРЇР¦ - Р§Р�РЎР›Рћ"
     var now = moment().valueOf();
     var interval = (tomorrow - now) / 1000;
     var clock = $('.clock').FlipClock(interval, {
@@ -231,7 +232,7 @@ $(document).ready(function () {
 
     //PARALLAX
     $('.parallax[data-type="background"]').each(function () {
-        var $bgobj = $(this); // ��������� �����
+        var $bgobj = $(this); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         $(window).scroll(function () {
             var yPos = -($window.scrollTop() / $bgobj.data('speed'));
             var coords = '50% ' + yPos + 'px';
@@ -240,7 +241,7 @@ $(document).ready(function () {
 
     });
     $('.action[data-type="background"]').each(function () {
-        var $bgobj = $(this); // ��������� �����
+        var $bgobj = $(this); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         $(window).scroll(function () {
             var yPos = -(($window.scrollTop()/2) / $bgobj.data('speed'));
             var coords = '50% ' + yPos + 'px';
@@ -249,7 +250,7 @@ $(document).ready(function () {
 
     });
     $('.action1[data-type="background"]').each(function () {
-        var $bgobj = $(this); // ��������� �����
+        var $bgobj = $(this); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         $(window).scroll(function () {
             var yPos = -(($window.scrollTop()/3) / $bgobj.data('speed'));
             var coords = '50% ' + yPos + 'px';
