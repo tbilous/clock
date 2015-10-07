@@ -27,6 +27,12 @@
     height: 17.5em;
     margin: 0 auto 1.5em;
   }
+  .top1 {
+    .item-photo {
+      background: url("../img/goods/item10.png") center no-repeat;
+      background-size: 100%;
+    }
+  }
   .top2 {
     .item-photo {
       background: url("../img/goods/item11-hires.jpg") center no-repeat;
@@ -40,6 +46,12 @@
   .top3 {
     .item-photo {
       background: url("../img/goods/item12-lowres.jpg") center no-repeat;
+      background-size: contain;
+    }
+  }
+  .top4 {
+    .item-photo {
+      background: url("../img/goods/dubl_clock.png") center no-repeat;
       background-size: contain;
     }
   }
