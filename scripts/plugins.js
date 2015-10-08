@@ -158,6 +158,35 @@ $(document).ready(function () {
              $('.animated').removeClass('animated')
             })
     } else {
+        //PARALLAX
+        $('.parallax[data-type="background"]').each(function () {
+            var $bgobj = $(this); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+            $(window).scroll(function () {
+                var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+                var coords = '50% ' + yPos + 'px';
+                $bgobj.css({backgroundPosition: coords});
+            });
+
+        });
+        $('.action[data-type="background"]').each(function () {
+            var $bgobj = $(this); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+            $(window).scroll(function () {
+                var yPos = -(($window.scrollTop()/3) / $bgobj.data('speed'));
+                var coords = '50% ' + yPos + 'px';
+                $bgobj.css({backgroundPosition: coords});
+            });
+
+        });
+        $('.action1[data-type="background"]').each(function () {
+            var $bgobj = $(this); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+            $(window).scroll(function () {
+                var yPos = -(($window.scrollTop()/5) / $bgobj.data('speed'));
+                var coords = '50% ' + yPos + 'px';
+                $bgobj.css({backgroundPosition: coords});
+            });
+
+        });
+        //SCROLL
         $(".scroll").each(function () {
             var block = $(this);
             var action = $(this).data('action');
@@ -233,7 +262,7 @@ $(document).ready(function () {
         }
     });
 
-    //PARALLAX
+/*    //PARALLAX
     $('.parallax[data-type="background"]').each(function () {
         var $bgobj = $(this); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         $(window).scroll(function () {
@@ -260,7 +289,7 @@ $(document).ready(function () {
             $bgobj.css({backgroundPosition: coords});
         });
 
-    });
+    });*/
 
 //PARALLAX
 /*    $('.action').parallax({
