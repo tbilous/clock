@@ -77,6 +77,10 @@
   .sat-unit {
     width: 12em;
     height: 12em;
+    @media screen and (max-width: $screen-sm-max) {
+      width: 10em;
+      height: 10em;
+    }
     margin: 0 auto;
     background: url("../img/satisfaction-bg.png") no-repeat center;
     background-size: 100%;

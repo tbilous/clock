@@ -15,6 +15,11 @@
   li {
     display: inline-block;
   }
+  .payment-block{
+    @media screen and (max-width: $screen-sm-max) {
+     text-align: center;
+    }
+  }
   .pay-icon {
     width: 3.6em;
     height: 2.6em;

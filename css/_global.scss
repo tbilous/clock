@@ -70,6 +70,14 @@ input, a, button, textarea, .btn {
 
 .medium {
   font-weight: 500;
+  @media screen and (max-width: $screen-sm-max) {
+    font-size: 14px;
+  }
+}
+.text-right{
+  @media screen and (max-width: $screen-sm-max) {
+    text-align: center;
+  }
 }
 
 .bold {

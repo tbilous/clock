@@ -23,6 +23,10 @@
     width: 12.5em;
     height: 12.5em;
     margin: 0 auto;
+    @media screen and (max-width: $screen-sm-max) {
+      width: 8em;
+      height: 8em;
+    }
   }
   .step1 {
     .step-icon {

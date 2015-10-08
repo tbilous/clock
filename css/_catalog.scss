@@ -31,6 +31,10 @@
     .item-photo {
       background: url("../img/goods/item10.png") center no-repeat;
       background-size: 100%;
+      @media screen and (max-width: $screen-sm-max) {
+        background: url("../img/goods/item10.png") left center no-repeat;
+        background-size: 70%;
+      }
     }
   }
   .top2 {
@@ -38,8 +42,8 @@
       background: url("../img/goods/item11-hires.jpg") center no-repeat;
       background-size: 100%;
       @media screen and (max-width: $screen-sm-max) {
-        background: url("../img/goods/item11-lowres.jpg") center no-repeat;
-        background-size: 100%;
+        background: url("../img/goods/item11-lowres.jpg") left center no-repeat;
+        background-size: 70%;
       }
     }
   }
@@ -47,36 +51,56 @@
     .item-photo {
       background: url("../img/goods/item12-lowres.jpg") center no-repeat;
       background-size: contain;
+      @media screen and (max-width: $screen-sm-max) {
+        background: url("../img/goods/item12-lowres.jpg") left center no-repeat;
+        background-size: 70%;
+      }
     }
   }
   .top4 {
     .item-photo {
       background: url("../img/goods/dubl_clock.png") center no-repeat;
       background-size: contain;
+      @media screen and (max-width: $screen-sm-max) {
+        background: url("../img/goods/dubl_clock.png") left center no-repeat;
+        background-size: 70%;
+      }
     }
   }
   .bottom1 {
     .item-photo {
       background: url("../img/goods/item20.jpg") center no-repeat;
       background-size: contain;
+      @media screen and (max-width: $screen-sm-max) {
+        background-size: 70%;
+      }
     }
   }
   .bottom2 {
     .item-photo {
       background: url("../img/goods/item21.jpg") center no-repeat;
       background-size: contain;
+      @media screen and (max-width: $screen-sm-max) {
+        background-size: 70%;
+      }
     }
   }
   .bottom3 {
     .item-photo {
       background: url("../img/goods/item22.jpg") center no-repeat;
       background-size: contain;
+      @media screen and (max-width: $screen-sm-max) {
+        background-size: 70%;
+      }
     }
   }
   .bottom4 {
     .item-photo {
       background: url("../img/goods/item23.jpg") center no-repeat;
       background-size: contain;
+      @media screen and (max-width: $screen-sm-max) {
+        background-size: 70%;
+      }
     }
   }
 
@@ -100,5 +124,8 @@
     display: block;
     border-radius: 3px;
     margin: .5em auto .9em;
+    @media screen and (max-width: $screen-sm-min) {
+      font-size: 8px;
+    }
   }
 }

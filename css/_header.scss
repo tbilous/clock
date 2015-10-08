@@ -163,5 +163,8 @@
   }
   .counter.top {
     padding-top: 8px;
+    @media screen and (max-width: $screen-sm-max) {
+      margin-bottom: 1em;
+    }
   }
 }

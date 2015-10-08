@@ -154,6 +154,9 @@ $(document).ready(function () {
     var iPad = navigator.userAgent.search(/iPad/i);
     if (Android != -1 || iPhone != -1 || iPad != -1) {
         $('html').css('width', window.innerWidth + 'px');
+        $('body').each(function(){
+             $('.animated').removeClass('animated')
+            })
     } else {
         $(".scroll").each(function () {
             var block = $(this);
@@ -176,7 +179,7 @@ $(document).ready(function () {
                 else {
                     if (!block.hasClass('no-repeat')) {
                         block.removeClass(action).removeClass('start');
-                        block.trigger('animateOut');
+                        //block.trigger('animateOut');
                     }
                 }
             });
