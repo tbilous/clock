@@ -23,7 +23,7 @@ body {
 
 body {
   @media screen and (max-width: $screen-sm-min) {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
@@ -58,6 +58,9 @@ input, a, button, textarea, .btn {
 
 .white-bg {
   background-color: white;
+}
+.contact-form{
+  margin-bottom: 1em;
 }
 
 .brand-color {
