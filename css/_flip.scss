@@ -11,7 +11,19 @@
 }
 .flip-clock-wrapper{
   display: block;
+  @media screen and (max-width : 400px) {
+    margin: 0;
+    .flip-clock-divider{
+      width: 11px;
+      left: -3px;
+      &.hours{
+        display: none;
+      }
+
+    }
+  }
 }
+
 .flip {
   font-family: 'MyriadProRegular', sans-serif;
   position: relative;

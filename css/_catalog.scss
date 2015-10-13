@@ -23,9 +23,19 @@
     left: 0;
   }
   .item-photo {
-    width: 17.5em;
+    max-width: 17.5em;
+    width: 100%;
     height: 17.5em;
     margin: 0 auto 1.5em;
+
+  }
+  @media screen and (max-width: $screen-phone) {
+    .catalog-item{
+      height: 34em;
+    }
+    .item-photo {
+      height: 14em;
+    }
   }
   .top1 {
     .item-photo {
@@ -33,7 +43,7 @@
       background-size: 100%;
       @media screen and (max-width: $screen-sm-max) {
         background: url("../img/goods/item10.png") left center no-repeat;
-        background-size: 70%;
+        background-size: contain;
       }
     }
   }
@@ -43,7 +53,7 @@
       background-size: 100%;
       @media screen and (max-width: $screen-sm-max) {
         background: url("../img/goods/item11-lowres.jpg") left center no-repeat;
-        background-size: 70%;
+        background-size: contain;
       }
     }
   }
@@ -53,7 +63,7 @@
       background-size: contain;
       @media screen and (max-width: $screen-sm-max) {
         background: url("../img/goods/item12-lowres.jpg") left center no-repeat;
-        background-size: 70%;
+        background-size: contain;
       }
     }
   }
@@ -63,7 +73,7 @@
       background-size: contain;
       @media screen and (max-width: $screen-sm-max) {
         background: url("../img/goods/dubl_clock.png") left center no-repeat;
-        background-size: 70%;
+        background-size: contain;
       }
     }
   }
