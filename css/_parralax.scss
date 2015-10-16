@@ -11,18 +11,15 @@
 }
 
 #action {
-  background: url("../img/parallax-2-bg-hires.jpg") 50% 0 no-repeat fixed;
- @media screen and (max-width: $screen-phone) {
-    background: url("../img/parallax-2-bg-lowres.jpg") center no-repeat fixed;
-  }
+  background: url("../img/action1-bg.jpg") 50% 0 no-repeat;
   margin: 0 auto;
   position: relative;
 }
 #action1 {
-  background: url("../img/parallax-3-bg-hires.jpg") 50% 0 no-repeat fixed;
-  @media screen and (max-width: $screen-phone) {
+  background: url("../img/action2-bg.jpg") 50% 0 no-repeat ;
+/*  @media screen and (max-width: $screen-sm-max) {
     background: url("../img/parallax-3-bg-lowres.jpg") center repeat fixed;
-  }
+  }*/
   margin: 0 auto;
   position: relative;
 }
