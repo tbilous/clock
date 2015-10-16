@@ -92,7 +92,7 @@ $(document).ready(function () {
     }
 
     dateEnd = date;
-    console.log(dateEnd);
+    //console.log(dateEnd);
 
     //CLOCK
     var tomorrow = moment().endOf('day').valueOf() + 1;

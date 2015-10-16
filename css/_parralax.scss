@@ -1,7 +1,7 @@
 #parallax-1 {
   background: url("../img/parallax-on-bg-hires.jpg") 50% 0 no-repeat fixed;
-  @media screen and (max-width: $screen-sm-max) {
-    background: url("../img/parallax-on-bg-lowres.jpg") center repeat fixed;
+  @media screen and (max-width: $screen-phone) {
+    background: url("../img/parallax-on-bg-lowres.jpg") center no-repeat fixed;
   }
   min-height: 28.6em;
   margin: 0 auto;
@@ -12,15 +12,15 @@
 
 #action {
   background: url("../img/parallax-2-bg-hires.jpg") 50% 0 no-repeat fixed;
-  @media screen and (max-width: $screen-sm-max) {
-    background: url("../img/parallax-2-bg-lowres.jpg") center repeat fixed;
+ @media screen and (max-width: $screen-phone) {
+    background: url("../img/parallax-2-bg-lowres.jpg") center no-repeat fixed;
   }
   margin: 0 auto;
   position: relative;
 }
 #action1 {
   background: url("../img/parallax-3-bg-hires.jpg") 50% 0 no-repeat fixed;
-  @media screen and (max-width: $screen-sm-max) {
+  @media screen and (max-width: $screen-phone) {
     background: url("../img/parallax-3-bg-lowres.jpg") center repeat fixed;
   }
   margin: 0 auto;

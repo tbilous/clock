@@ -23,7 +23,7 @@
     background: url("../img/bottom-form-bg.png") no-repeat center top;
     padding: 1em 2em 2.5em;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto 1em;
     h2 {
       margin-top: 0;
     }
@@ -43,6 +43,7 @@
     }
     .bg-block {
       background-position: top center;
+      background-size: 30%;
     }
   }
   .counter.middle {
@@ -58,11 +59,19 @@
 .action{
   .bg-block {
     background: url("../img/action-md-prlx-bg.png") no-repeat -5% 100%;
+    @media screen and (max-width: $screen-md-min) {
+      background-position: left top;
+      background-size: 50%;
+    }
   }
 }
 .action1{
   .bg-block {
     background: url("../img/action1-md-prlx-bg.png")  no-repeat 0 100%;
+    @media screen and (max-width: $screen-md-min) {
+      background-position: left top;
+      background-size: 50%;
+    }
   }
 }
 .counter.middle{
