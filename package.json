@@ -1,0 +1,23 @@
+{
+  "name": "SKMEI",
+  "version": "1.0.0",
+  "description": "SKMEI landing",
+  "main": "index.js",
+  "dependencies": {
+    "yuicompressor": "^2.4.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbilous/clock.git"
+  },
+  "author": "Taras Bilous tbilous@yahoo.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbilous/clock/issues"
+  },
+  "homepage": "https://github.com/tbilous/clock"
+}

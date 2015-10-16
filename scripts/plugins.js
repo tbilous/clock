@@ -180,8 +180,7 @@ $(document).ready(function () {
                 }
                 else {
                     if (!block.hasClass('no-repeat')) {
-                        block.removeClass(action).removeClass('start');
-                        //block.trigger('animateOut');
+                        block.removeClass(action).removeClass('start')
                     }
                 }
             });

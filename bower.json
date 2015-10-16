@@ -1,0 +1,23 @@
+{
+  "name": "SKMEI landing",
+  "version": "1.0.0",
+  "homepage": "https://github.com/tbilous/clock",
+  "authors": [
+    "Taras Bilous <tbilous@yahoo.com>"
+  ],
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "~2.10.6"
+  }
+}
